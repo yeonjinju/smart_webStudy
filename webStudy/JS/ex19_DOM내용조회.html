@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex19_DOM내용조회</title>
+</head>
+<body>
+	<p id="msg">졸립니다.......</p>
+
+	<div id="area">
+		<h1>공사를</h1>
+		<h2>중지하라 중지하라</h2>
+	</div>
+
+	<script>
+		// msg라는 id값을 가진 요소를 가져와서
+		// msg라는 변수에 저장
+		let msg = document.getElementById("msg");
+		console.log("p태그 : ",msg);
+
+		// msg의 전체 content에 접근
+		console.log(msg.innerHTML);
+
+		// msg의 content 내용을 변경
+		msg.innerHTML = "내용변경완료!";
+		msg.innerHTML += "내용추가완료!";
+
+		// area라는 아이디 값을 가진 요소를 area 변수에 저장
+		let area = document.getElementById("area");
+		// area 출력
+		console.log(area);
+		// area의 전체 content 출력
+		console.log(area.innerHTML);
+		// area의 content(태그제외) 출력
+		console.log(area.textContent);
+		
+		// area의 내용을 변경
+		// - innerHTML : 조회할 때 태그 포함 조회
+		//				 변경할 때 태그를 이해함
+		area.innerHTML = "<h1>새로운내용</h1>";
+		// - textContent : 조회할 때 태그 빼고 조회
+		//				   변경할 때 태그가 들어있어도 이해못함.(텍스트로 이해)
+		//area.textContent = "<h1>새로운내용</h1>"; <- 태그까지 내용으로 출력
+
+	</script>
+</body>
+</html>

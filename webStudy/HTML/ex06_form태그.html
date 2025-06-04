@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex06_form태그</title>
+</head>
+<body>
+	<!--
+	form 태그 : 웹페이지에 입력받을 수 있는 공간을 만들어주는 태그  
+	action 속성 : form 안에서 입럭한 데이터의 전달 위치 지정
+				  GET(기본값), POST
+
+	input 태그 : 사용자에게 입력을 받을 수 있는 태그
+				-> type 속성에 따라 다양한 것을 입력받을 수 있음
+				==> password(비밀번호), submit(제출), reset(초기화),
+
+	* input 추가속성 : name(input 태그끼리의 구분값)
+					   maxlength(글자수 제한)
+					   placeholder(미리보기 텍스트)
+	
+	checkbox 속성 : 여러 가지 옵션을 선택할 수 있음
+	radio 속성 : 여러 가지 옵션 중 하나만 선택할 수 있음
+	=> 각각의 선택지는 동일한 질문끼리 같은 name 속성으로 묶고,
+	   각 선택지를 구분하기 위해서 value 속성값을 설정
+
+	*select 태그*
+	 - 목록 상자를 만드는 역할
+	 - 목록 상자 안의 각각의 선택지는 option 태그를 사용
+
+	-->
+
+	<form action="#" method="GET">
+		<span>ID </span>
+		<input type="text" name="id" maxlength="10" placeholder="10글자 이내로 입력"> <br>
+		<span>PW </span>
+		<input type="password" name="pw"> <br>
+
+		<input type="color" name="" id=""> <br>
+		<input type="file" name="" id=""> <br>
+		<input type="date" name="" id=""> <br>
+
+		<span>밥</span>
+		<input type="checkbox" name="eat" value="rice">
+		<span>빵</span>
+		<input type="checkbox" name="eat" value="bread">
+		<span>면</span>
+		<input type="checkbox" name="eat" value="noodle">
+		<br>
+		<span>남자</span>
+		<input type="radio" name="gender" value="man">
+		<span>여자</span>
+		<input type="radio" name="gender" value="woman">
+		<br>
+		<span>안경씀</span>
+		<input type="radio" name="glasses" value="on">
+		<span>안경안씀</span>
+		<input type="radio" name="glasses" value="off">
+		<br>
+		<select name="home" id="">
+			<option value="">거주지</option>
+			<option value="seoul">서울</option>
+			<option value="gyunggi">경기</option>
+			<option value="etc">그 외</option>
+		</select>
+		<br>
+		<input type="submit">
+		<input type="reset">
+	</form>
+</body>
+</html>

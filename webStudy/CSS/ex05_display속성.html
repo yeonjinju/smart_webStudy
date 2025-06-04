@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex05_display속성</title>
+	<style>
+		/* display */
+		/* (1) display : block
+			- 무조건 가로로 한 줄 전체 영역을 차지하는 속성
+			- p, h1, div 등등.. 기본값이 block
+			- ★width, hieght 값 설정이 가능 
+		*/
+		/* (2) display: inline
+			- 요소 안 content 크기만큼만 영역을 차지
+			- span, a 등등.. 기본값이 inline
+			- ★width, hieght 값 설정 불가능
+			  이유!! 이미 'content 크기만큼'으로 크기 설정을 해 둔 것이기 때문 
+		*/
+		/* (3) display: none
+			- 해당하는 요소를 눈에 보이지 않게 설정  
+		*/
+		p {
+			background-color: antiquewhite;
+			display: inline;
+		}
+		span {
+			background-color: khaki;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<p>현재 시각</p>
+	<p>11:40</p>
+	<p>점심시간은 12:50</p>
+	<span>오늘 점심은</span>
+	<span>샌드위치</span>
+	<span>저녁은 계란/야채</span>
+</body>
+</html>

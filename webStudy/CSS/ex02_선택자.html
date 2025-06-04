@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex02_선택자</title>
+	<style>
+	/* 선택자의 종류 */
+	/*
+	(1) 전체 선택자 : *
+		- HTML 문서의 모든 요소를 선택 
+	*/
+	* {
+		color: cadetblue;
+	}
+	/* (2) 태그 선택자 : 태그 이름 */
+	li {
+		color: skyblue;
+	}
+	/* 내가 스타일을 구분해서 지정해주고 싶을 때
+		-> 클래스, 아이디 사용
+
+		클래스 : 중복가능, 재사용성 뛰어남
+		아이디 : 중복불가능! 한 문서당 하나의 아이디만 가능! 유일!(로고, 상단바, 검색창 같은 고유한 디자인)
+	*/
+	
+	/* (3) 클래스 선택자 : .클래스이름 */
+	.one {
+		color: burlywood;
+	}
+
+	/* (4) 아이디 선택자 : #아이디이름 */
+	#two {
+		color: salmon;
+	}
+	</style>
+</head>
+<body>
+	<h1 class="one">내가 좋아하는 것</h1>
+	<ul>
+		<li>잠</li>
+		<li class="one" id="two">쿠키런</li>
+		<li>바다</li>
+	</ul>
+
+	<p class="one">바다 보러 가서 잠 많이 자고 쿠키런 하기</p>
+</body>
+</html>

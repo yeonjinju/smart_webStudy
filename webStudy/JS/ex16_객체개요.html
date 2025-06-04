@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex16_객체개요</title>
+</head>
+<body>
+	<script>
+		// 객체 구조 : {key:value, key:value, ...}
+		// key : 객체의 속성(property) - 문자열로 표현
+		// value : property의 값.
+		//		   -> 기본자료형, 객체타입 데이터, 함수
+		// - 객체의 값에 접근할 때는 객체명에 점.을 찍고 접근
+
+		// 객체 종류
+		// 1. 내장객체
+		//	  - JS엔진에 내장되어 있어서, 엔진이 구동되는 시점에 바로 제공되는 객체
+		//	  - Math, Array, Date, String ...
+
+		// 2. 브라우저 객체
+		//	  - JS엔진이 구동되는 시점에 제공되는 브라우저 관련된 객체들
+		//	  - BOM(Browser Object Model), DOM(Document Object Model)
+
+		// 3. 사용자 정의 객체
+		//	  - 사용자가 직접 정의한 객체
+
+		// 사용자 정의 객체
+		let person = {
+			"name" : "miri",
+			"age" : 20,
+			"mincho" : true,
+			"info" : function(){
+				console.log(this.name, this.age, this.mincho);
+			},
+			"info2" : function(a){
+				console.log(this.name + a);
+			}
+		}
+
+		// person 객체의 이름 출력
+		console.log(person.name);
+
+		// person 객체의 자기소개 함수 실행
+		person.info()
+
+		person.info2(" 안녕")
+
+		// person 객체의 나이 변경
+		person.age = 23;
+		console.log(person.age);
+
+		// 내장 객체
+		let today = new Date();
+		console.log(today);
+
+		let year = today.getFullYear();
+		let month = today.getMonth()+1; // 0월~11월
+		let date = today.getDate();
+		let day = today.getDay(); // 1월 2화 ...
+		let hour = today.getHours();
+		let minute = today.getMinutes();
+		let second = today.getSeconds();
+
+		let yoil = "";
+
+		if(day == 1){
+			yoil = "월"
+		} else if(day == 2){
+			yoil = "화"
+		} else if(day == 3){
+			yoil = "수"
+		} else if(day == 4){
+			yoil = "목"
+		} else if(day == 5){
+			yoil = "금"
+		} else if(day == 6){
+			yoil = "토"
+		} else if(day == 7){
+			yoil = "일"
+		}
+
+		// switch(day){
+		// 	case 1 : day = "월"; break;
+		// 	case 2 : day = "화"; break;
+		// 	case 3 : day = "수"; break;
+		// 	case 4 : day = "목"; break;
+		// 	case 5 : day = "금"; break;
+		// 	case 6 : day = "토"; break;
+		// 	case 7 : day = "일"; break;
+		// }
+
+
+		document.write(`지금은 ${year}년 ${month}월 ${date}일 ${yoil}요일, ${hour}시 ${minute}분 ${second}초입니다.`);
+
+
+	</script>
+</body>
+</html>

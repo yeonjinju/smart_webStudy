@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex15_position</title>
+	<style>
+		div > div{
+			width: 100px;
+			height: 100px;
+			background-color: greenyellow;
+			border: 1px solid black;
+		}
+
+		/* position 속성
+			: 요소가 배치되는 방식을 정할 수 있음
+			: static, relative, absolute, fixed
+		*/
+		#static{
+			/* static : 정적인,
+						position 기본값
+						위치속성 비활성화
+						작성된 순서대로 차례차례 배치
+			*/
+			position: static;
+		}
+
+		#relative{
+			/* relative : 위치속성 활성화
+						  본인 원래 위치 기준에서 이동
+			*/
+			position: relative;
+			top: 30px;
+			left: 30px;
+		}
+
+		#absolute{
+			/* absolute : 절대적인
+						  위치속성 활성화
+						  기준 - position이 static이 아닌 부모를 기준으로 이동
+						  (부모가 없거나, 부모가 static일 때는 body 태그를 기준으로 함)
+			*/
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+
+		#parents{
+			width: 400px;
+			height: 400px;
+			background-color: papayawhip;
+			border: 1px solid black;
+			position: relative;
+		}
+
+		#fixed{
+			/* fixed : 
+			*/
+			position: fixed;
+			bottom: 100px;
+			left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<span>body태그 안</span>
+	<div id="parents">
+		<span>parents 안쪽</span>
+		<div id="static">static</div>
+		<div id="relative">relative</div>
+		<div id="absolute">absolute</div>
+		<div id="fixed">fixed</div>
+	</div>
+</body>
+</html>

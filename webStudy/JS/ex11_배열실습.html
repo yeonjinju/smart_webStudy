@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex11_배열실습</title>
+</head>
+<body>
+	<script>
+		let num = Number(prompt("과목 수를 입력하세요"));
+		
+		// 과목명 배열
+		let sub = [];
+
+		for(let i=0; i<num; i++){
+			//sub[i] = prompt("과목명을 입력하세요");
+			sub.push(prompt("과목명을 입력하세요"));
+		}
+
+		// 과목 점수 배열
+		let score = [];
+		for(let i=0; i<sub.length; i++){
+			score.push(Number(prompt(`${sub[i]}의 점수를 입력하세요`)));
+			// prompt로 받은 점수를 Number형으로 저장
+		}
+		console.log(sub);
+		console.log(score);
+
+		let resultHTML = "";
+		let sum = 0;
+		resultHTML += '<table border="1px solid black"><tr>';
+
+		for(let i=0; i<sub.length; i++) {
+			resultHTML += "<td>";
+			resultHTML += sub[i];
+			resultHTML += "</td>"
+		}
+		resultHTML += "<td>총합</td>";
+		resultHTML += "<td>평균</td>";
+		resultHTML += "</tr><tr>";
+
+		for(let i=0; i<score.length; i++) {
+			resultHTML += "<td>";
+			resultHTML += score[i];
+			resultHTML += "</td>"
+			sum += score[i];
+		}
+		avg = sum/sub.length;
+		resultHTML += "<td>"+sum+"</td>";
+		resultHTML += "<td>"+avg+"</td>";
+		resultHTML += "</tr></table>";
+
+		document.write(resultHTML);
+
+	</script>
+</body>
+</html>

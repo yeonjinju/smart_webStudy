@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex04_조합선택자</title>
+	<style>
+		/* 조합선택자 */
+		/* 그룹선택자, 계층선택자, 반응선택자 */
+		/* 
+		(1) 그룹선택자
+			- 선택자를 ,로 구분해가면서 여러개 적기 가능
+			ex) p, span, a {}
+		*/
+
+		/* (2) 계층선택자 */
+		/*
+		(2-1) 자손선택자
+			  기호 : 띄어쓰기(공백)
+			  ex) ul li {} 
+		*/
+		body p {
+			color: red;
+		}
+
+		/* 
+		(2-2) 자식선택자
+			  기호 : >
+			  ex) ul > li {}
+		*/
+		ul > * {
+			color: blue;
+		}
+
+		/* 
+		(2-3) 인접형제선택자(근접후행선택자)
+			  기호 : +
+			  ex) ul > li + li
+		*/
+		.one + li {
+			background-color: lemonchiffon;
+		}
+
+		p + * {
+			background-color: aliceblue;
+		}
+
+		/* 
+		(2-4) 일반형제선택자(후행선택자)
+			  기호 : ~
+			  ex) li ~ li
+		*/
+		p ~ p {
+			font-family: '궁서';
+		}
+
+		.one ~ * {
+			font-family: '굴림';
+		}
+
+		/*
+		(3) 반응선택자
+			- 선택자:hover => 요소에 마우스를 올리고 있는 동안만!!
+			- 선택자:active => 요소를 클릭하고 있는 동안!!
+		*/
+		h1:hover{
+			color: teal;
+		}
+		h1:active{
+			color: cornflowerblue;
+		}
+
+		/* CSS 명시도 */
+		/* 
+		전체선택자(*) - 0 
+		태그선택자(태그명) - 1
+		클래스선택자(.클래스명) - 10
+		아이디선택자(#아이디명) - 100
+		-> 조합선택자의 경우, 사용한 선택자들을 일일히 덧셈 계산하기
+		*/
+
+		/* 명시도를 계산하기 힘든 경우 치트키 */
+		#only {
+			color: greenyellow;
+		}
+
+		/*  !important 키워드 
+			- 명시도를 1000 정도로 높임(모든 명시도 무시하고 내가 제일 중요해!!)
+		*/
+
+		/* 25.03.26 선택자 총정리
+		이름      기호      명시도
+		전체      *      0
+		타입      태그이름   1
+		클래스   .클래스명   10   
+		아이디   #아이디명    100
+		===> !important      1000
+
+		-- 조합선택자 -- 
+		자식      >      
+		자손      (공백)
+		일반형제    ~
+		인접형제   +
+		그룹       선택자,선택자,
+		반응선택자   :hover :active
+		*/
+		h1 {
+			color: tomato !important;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="only">건강하게 살기~</h1>
+
+	<p>1번</p>
+	<ul>
+	  <li class="one">2번</li>
+	  <li>3번</li>
+	  <li>4번</li>
+	  <p>?? p태그</p>
+	</ul>
+	<p>5번</p>
+	<p>6번</p>
+</body>
+</html>

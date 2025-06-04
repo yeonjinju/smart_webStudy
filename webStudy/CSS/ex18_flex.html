@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex18_flex</title>
+	<style>
+		.container{
+			box-sizing: border-box;
+			height: 500px;
+			background-color: beige;
+			/* flex : 레이아웃 배치 기능
+				- 내가 움직이고 싶은(배치하고 싶은) 요소 : item
+				- 그 item의 부모 요소 : container
+			*/
+
+			/* (1) flex 설정 */
+			display: flex;
+
+			/* (2) 배치 방향 설정 : flex-direction */
+			/* (2-1) row (기본값)
+					 - 메인 축 : 가로
+					 - 서브 축 : 세로 
+			*/
+			flex-direction: row;
+			/* (2-2) column 
+					 - 메인 축 : 세로
+					 - 서브 축 : 가로
+			*/
+			/* flex-direction: column; */
+
+			/* (3) 메인축 정렬 : justify-content */
+			justify-content: center;
+
+			/* (4) 서브축 정렬 : align-items */
+			align-items: center;
+
+			/* (5) 줄넘김 처리 : flex-wrap */
+			/* flex-wrap: wrap; */
+		}
+
+		.item{
+			width: 100px;
+			height: 100px;
+			background-color: tomato;
+			border: 1px solid black;
+
+			/* item에 작성해야 하는 설정 */
+			/* flex-basis : 아이템의 기본 크기 설정 */
+			flex-basis: 15%;
+		}
+
+		.center{
+			flex-basis: 70%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item center">2</div>
+		<div class="item">3</div>
+	</div>
+</body>
+</html>

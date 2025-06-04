@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>스마트인재개발원</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+	<style>
+		@font-face {
+			font-family: 'Pretendard-Regular';
+			src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		* {
+			font-family: 'Pretendard-Regular';
+		}
+
+		ul,li {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		.inner_1280 {
+			width: 1280px;
+		}
+
+		.header {
+			height: 60px;
+			padding-top: 20px;
+		}
+		.header > .inner_1280{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.search_bar{
+			width: 50%;
+			background-color: #fff;
+			border: 1px solid #E2EAF0;
+			border-radius: 30px;
+			display: flex;
+		}
+		.search_bar > input{
+			width: 100%;
+		} 
+		.search_bar .icon{
+			display: block;
+		} 
+
+		.depth1 {
+			display: flex;
+		}
+		.depth1 > li{
+			margin-right: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<div class="inner_1280">
+			<h1 class="logo">
+				<a href="">
+					<img src="../imgs/logo_smhrd.svg" alt="">
+				</a>
+			</h1>
+			<div class="search_bar">
+				<input type="text" placeholder="과정명 입력">
+				<span class="material-symbols-outlined icon">
+					search
+				</span>
+			</div>
+			<ul class="hd_util">
+				<li class="search">
+					<span class="material-symbols-outlined icon">
+						search
+					</span>
+				</li>
+				<li class="hamburger">
+					<span class="material-symbols-outlined icon">
+						menu
+					</span>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="menu">
+		<div class="inner_1280">
+			<ul class="depth1">
+				<li>
+					<a href="">KHP센터소개</a>
+				</li>
+				<li>
+					<a href="">개발원소개</a>
+				</li>
+				<li>
+					<a href="">교육안내</a>
+				</li>
+				<li>
+					<a href="">수강신청</a>
+				</li>
+				<li>
+					<a href="">시설 • 장비 공유</a>
+				</li>
+				<li>
+					<a href="">지원센터</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex09_조건반복실습</title>
+</head>
+<body>
+	<script>
+		// 랜덤수 생성
+		// 0~1 사이의 숫자를 소수점 형태(실수)로 되돌려주는 기능
+		let num = Math.random();
+		//console.log(num);
+
+		// 1~100 사이의 점수를 받고 싶다면
+		let num2 = parseInt(Math.random()*100+1);
+		//1을 더하는 이유 : 0~100이니까 1을 더하기
+
+		// 1. 1~10 사이의 랜덤한 값(ranNum)을 만들기
+		// 2. 사용자에게 랜덤수를 맞추게 하기
+		// 3. 틀렸다면, 정답보다 작은지/큰지 안내
+		// 4. 2~3번 반복
+		let ranNum = parseInt(Math.random()*10+1);
+		let cnt = 3;
+		console.log(ranNum);
+		do{
+			let answer = prompt(`숫자를 입력해주세요! 남은 기회 :${cnt}번`);
+			let answerS = parseInt(answer);
+
+			if(answerS == ranNum){
+				alert("정답입니다 축하합니다🎇");
+				break;
+			}else if(answerS < ranNum){
+				alert("입력한 숫자보다 큰 수입니다..")
+				cnt--;
+			}else if(answerS > ranNum){
+				alert("입력한 숫자보다 작은 수입니다..")
+				cnt--;
+			}
+
+			if(cnt == 0){
+				alert("기회가 끝났습니다 ㅠ");
+			}
+		}while(cnt > 0)
+
+		// 선생님 답안 : while true 문
+		// while(true){
+		// 	let answer = prompt(`숫자를 입력해주세요! 남은 기회 :${cnt}번`);
+		// 	let answerS = parseInt(answer);
+
+		// 	if(answerS == ranNum){
+		// 		alert("정답입니다 축하합니다🎇");
+		// 		break;
+		// 	}else if(answerS < ranNum){
+		// 		alert("입력한 숫자보다 큰 수입니다..")
+		// 		cnt--;
+		// 	}else if(answerS > ranNum){
+		// 		alert("입력한 숫자보다 작은 수입니다..")
+		// 		cnt--;
+		// 	}
+		// 	if(cnt == 0){
+		// 		alert("기회가 끝났습니다 ㅠ");
+		// 		break;
+		// 	}
+		// }
+
+
+	</script>
+</body>
+</html>

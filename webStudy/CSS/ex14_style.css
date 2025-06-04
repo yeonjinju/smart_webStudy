@@ -1,0 +1,50 @@
+/* 이 공간은 거대한 style 태그 안이라고 생각해야 함! */
+/* css 파일을 분리해서 작업했을 때 장점
+   ==> 특정 스타일을 여러 html 파일에 중복적용 해줄 수가 있음
+   ====> 유지보수가 쉬워진다
+*/
+
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Nyangi-W-v1.0';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/Cafe24Nyangi-W-v1.0.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'April16th-Life';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/April16th-Life.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+	color: blue;
+}
+
+.ft_ogl_pdh{
+	font-family: 'Ownglyph_ParkDaHyun';
+}
+.ft_cookirun{
+	font-family: 'CookieRun-Regular';
+}
+.ft_Nyangi_w{
+	font-family: 'Cafe24Nyangi-W-v1.0';
+}
+.ft_416Life{
+	font-family: 'April16th-Life';
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex10_padding실습</title>
+	<style>
+		@font-face {
+			font-family: 'BMkkubulimTTF-Regular';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		/* padding : 테두리 기준 안쪽 (테두리와 content 사이 여백) */
+		/* 사용법은 margin 과 동일! */
+		/* 바깥쪽 > margin > border > padding > content */
+		*{
+			font-family: 'BMkkubulimTTF-Regular';
+			box-sizing: border-box;
+		}
+
+		#test{
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			border: 2px solid black;
+			padding: 10px;
+			/* 테두리와 내용 사이에 여백을 주기 때문에 요소의 크기가 커진 것처럼 보인다 */
+
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+		}
+		#test p{
+			margin: 0 0 5px;
+			font-size: 20px;
+		}
+		#test img{
+			display: block;
+			height: 80%;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+		}
+		.box1{
+			background-color: red;
+		}
+		.box2{
+			background-color: yellow;
+			padding-right: 100px;
+		}
+		.box3{
+			background-color: green;
+			padding-right: 200px;
+		}
+		.box4{
+			background-color: blue;
+			padding-right: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="test">
+		<p>배고파..</p>
+		<img src="https://kuku-keke.com/wp-content/uploads/2022/01/9805_8.png" alt="">
+	</div>
+	<br>
+	<div class="box box1"></div>
+	<div class="box box2"></div>
+	<div class="box box3"></div>
+	<div class="box box4"></div>
+</body>
+</html>

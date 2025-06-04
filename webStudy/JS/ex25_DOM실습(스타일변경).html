@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex25_DOM실습(스타일변경)</title>
+	<style>
+		body{
+			width: 400px;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			margin: 20px auto;
+		}
+		button{
+			display: inline-block;
+			width: 32.6%;		
+			height: 50px;
+			vertical-align: middle;
+			word-break: keep-all;
+			border: 0;
+			border-radius: 4px;
+			font-weight: 500;
+			font-size: 14px;
+		}
+		#circle{
+			background-color: yellow;
+		}
+		#square{
+			background-color: green;
+		}
+		#back{
+			background-color: blue;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<button id="circle">원으로 만들기</button>
+	<button id="square">직사각형으로 만들기</button>
+	<button id="back">원래대로 돌아가기</button>
+
+	<script>
+		// 요소의 스타일을 변경하는 방법
+		// 요소.style.스타일속성 = "값"
+		let box = document.getElementById("box");
+		let circle = document.getElementById("circle");
+		let square = document.getElementById("square");
+		let back = document.getElementById("back");
+
+		// 원으로 만들기! 누르면 -> 노란 원
+		// 직사각형으로 만들기! 누르면 -> 초록 직사각형(200x100)
+		circle.addEventListener("click", function(){
+			box.style.width = "100px";
+			box.style.height = "100px";
+			box.style.backgroundColor = "yellow";
+			box.style.borderRadius = "50%";
+		});
+
+		square.addEventListener("click", function(){
+			box.style.width = "200px";
+			box.style.height = "100px";
+			box.style.backgroundColor = "green";
+			box.style.borderRadius = "0";
+
+		});	
+
+		back.addEventListener("click", function(){
+			box.style.width = "100px";
+			box.style.height = "100px";
+			box.style.backgroundColor = "blue";
+			box.style.borderRadius = "0";
+
+		});	
+	</script>
+</body>
+</html>

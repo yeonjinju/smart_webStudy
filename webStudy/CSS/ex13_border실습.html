@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex13_border실습</title>
+	<style>
+		@font-face {
+			font-family: 'BMkkubulimTTF-Regular';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+		*{
+			font-family: 'BMkkubulimTTF-Regular';
+		}
+		.dduck{
+			width: 100px;
+			height: 100px;
+			border-radius: 0 50%;
+			box-sizing: border-box;
+		}
+		.red{
+			background-color: #e762a3;
+			box-shadow: inset -4px -10px 10px 5px #bf578a;
+		}
+		.green{
+			background-color: #517f41;
+			margin-left: 100px;
+			box-shadow: inset -4px -10px 10px 5px #4a723c;
+		}
+		.yellow{
+			background-color: #ebe303;
+			margin-left: 200px;
+			box-shadow: inset -4px -10px 10px 5px #d6cf0f;
+		}
+		.blue{
+			background-color: #fcfaf0;
+			margin-left: 300px;
+			box-shadow: inset -4px -10px 10px 5px #f0eee7;
+		}
+		h3{
+			font-size: 24px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h3>꿀떡 드세요~</h3>
+	<div class="dduck red"></div>
+	<div class="dduck green"></div>
+	<div class="dduck yellow"></div>
+	<div class="dduck blue"></div>
+</body>
+</html>

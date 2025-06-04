@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex27_시계</title>
+	<style>
+		@font-face {
+			font-family: 'Ramche';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'HSSanTokki20-Regular';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'establishRetrosansOTF';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'TTHakgyoansimMulgyeolB';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+			font-weight: 700;
+			font-style: normal;
+		}				
+		#time{
+			font-family: 'TTHakgyoansimMulgyeolB';
+			border: groove 16px rgb(255, 185, 22);
+			padding: 16px 10px;
+			color: rgb(252, 252, 58);
+			background-color: #151715;
+			font-size: 50px;
+			width: 280px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="time"></h1>
+
+	<script>
+		let time = document.getElementById("time");
+
+		let getTime = function(){
+			let now = new Date();
+			// let hours = now.getHours();
+			// let minutes = now.getMinutes();
+			// let seconds = now.getSeconds();
+
+			// 한자릿수 9 -> 09 로 나오도록 수정
+			let hours = String(now.getHours()).padStart(2, '0');
+			let minutes = String(now.getMinutes()).padStart(2, '0');
+			let seconds = String(now.getSeconds()).padStart(2, '0');
+
+			// 00:00:00 형태로 변경
+			let nowtime = `${hours}:${minutes}:${seconds}`;
+
+			time.textContent = nowtime;
+		}
+
+		getTime();
+
+		// 특정 주기마다 함수를 반복하는 함수
+		// setInterval(함수, 시간간격)
+		// -> 시간간격은 밀리세컨드단위. 1초 = 1000
+		setInterval(getTime, 1000);
+
+	</script>
+</body>
+</html>

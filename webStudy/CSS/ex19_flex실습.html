@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex19_flex실습</title>
+	<style>
+		a{
+			text-decoration: none;
+			color: black;
+			font-weight: 600;
+			transition: .2s;
+		}
+		a:hover{
+			color: gray;
+		}
+		.container{
+			background-color: aliceblue;
+			height: 100px;
+			display: flex;
+			align-items: center;
+		}
+		.container > div{
+			box-sizing: border-box;
+			height: 100%;
+			/* container 안의 하나의 div에 대해서,
+			자식 요소를 배치할 수 있는 container의 역할도 수행 가능하게 */
+			/* ==> 어떤 요소는 container이자 item이 될 수 있다! */
+		}
+		.item1{
+			flex-basis: 15%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.logo > a{display: block;}
+		.logo > a > img{width: 100%;}
+		.item2{
+			flex-basis: 70%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.item2 > a + a{margin-left: 30px;}
+		.item3{
+			flex-basis: 15%;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item1">
+			<h1 class="logo">
+				<a href="https://lms.smhrd.or.kr/home/main/indexMain">
+					<img src="../imgs/logo_smhrd.svg" alt="">
+				</a>
+			</h1>
+		</div>
+		<div class="item2">
+			<a href="">게시판</a>
+			<a href="">소식</a>
+			<a href="">문의하기</a>
+		</div>
+		<div class="item3">
+			<a href="">로그인</a>
+			<a href="">회원가입</a>
+		</div>
+	</div>
+</body>
+</html>

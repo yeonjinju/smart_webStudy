@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex05_연산자실습</title>
+</head>
+<body>
+	<script>
+		// 자스의 연산자는 자바와 거의 동일!
+		// 다른점 : 동등연산자/일치연산자
+
+		// 동등연산자 : ==, != / 데이터의 값만 비교 (자료형X)
+		// 일치연산자 : ===, !== / 데이터의 값과 자료형 비교
+
+		// 나누기 연산자도 조금 다름!
+		// 자바) /(몫-정수), %(나머지)
+		// 자스) /(나누기-실수), %(나머지)
+
+		// [예제]
+		let num = 312;
+		num10 = num - (num%100);
+		console.log("백의 자리 이하 버린 결과 >> ",num10);
+
+		intA = parseInt(num/100);
+		console.log(intA)
+		intB = Number(num/100)
+		console.log(intB)
+
+	</script>
+</body>
+</html>

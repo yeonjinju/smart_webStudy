@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ex21_DOM이벤트실습</title>
+	<style>
+		@font-face {
+			font-family: 'Ownglyph_corncorn-Rg';
+			src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
+		*{
+			font-family: 'Ownglyph_corncorn-Rg';
+		}
+		img{
+			width: 100px;
+		}
+		ul{
+			margin: 5px 0;
+			list-style: korean-hangul-formal;
+		}
+		button{
+			padding: 5px 10px;
+			border-style: dashed;
+			color: white;
+			font-size: 16px;
+		}
+		button:nth-of-type(1){
+			background-color: yellow;
+			color: black;
+		}
+		button:nth-of-type(2){
+			background-color: red;
+		}
+		button:nth-of-type(3){
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<h1> 내용 변경 전 </h1>
+	<button>h1 내용 변경</button>
+	<button>area에 a태그 추가</button>
+	<button>area에 ul태그 추가</button>
+	<div id="area"></div>
+
+	<script>
+		// 1번 버튼 누르면, h1태그의 내용이 "즐거운 자바스크립트 수업~"으로 변경
+		// 2번 버튼 누르면, area 안에 유튜브로 이동할 수 있는 a태그 생성
+		// 3번 버튼 누르면, ul로 -html, -css, -js 리스트를 생성
+		// --> 2번,3번 버튼은 누를 때마다 area에 계속 누적해서 더해주기!
+
+		let h1 = document.getElementsByTagName("h1")[0];
+		let btns = document.getElementsByTagName("button");
+		let area = document.getElementById("area");
+
+		// h1변경버튼
+		btns[0].addEventListener("click", () => {
+			console.log("변경이벤트"); // 실행되고 있는지 console로 확인
+			h1.textContent = "즐거운 자바스크립트 수업~";			
+		});
+
+		let makeYoutubeBtn = () => {
+			area.innerHTML += '<a href="https://www.youtube.com" target="_blank">유튜브로 이동</a><br>';
+		}
+
+		btns[1].addEventListener("click", makeYoutubeBtn );
+
+		btns[2].addEventListener("click", () => {
+			area.innerHTML += `
+				<ul>
+					<li>html</li>
+					<li>css</li>
+					<li>js</li>
+				</ul>
+			`; // 백틱(`)을 사용하면 코드 안에서 줄바꿈 허용 (원래 한줄로 써야함!)
+		});
+
+	</script>
+</body>
+</html>
