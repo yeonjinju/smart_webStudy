@@ -1,1 +1,3 @@
-/.metadata/
+# Eclipse 관련 설정 및 로그 무시
+**/.metadata/
+*.log
