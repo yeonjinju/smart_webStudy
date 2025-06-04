@@ -1,6 +1,0 @@
-INDEX VERSION 1.4+C:\Users\smhrd1\OneDrive\Desktop\web_Study\webStudy\JspServlet\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1527885550.index
-2412262842.index
-3873185136.index
-3995710595.index
-491399668.index
